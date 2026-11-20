@@ -1,0 +1,64 @@
+@import url("https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=integral-cf@700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Satoshi", "Avenir Next", "Segoe UI", sans-serif;
+  --color-ink: #000000;
+  --color-sale: #ff3333;
+  --color-muted: #f0f0f0;
+  --color-soft: #f2f0f1;
+  --color-line: #e6e6e6;
+  --color-star: #ffc633;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fff;
+  color: #000;
+  font-family: Satoshi, "Avenir Next", "Segoe UI", sans-serif;
+}
+
+.font-display {
+  font-family: "Integral CF", "Arial Black", Impact, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rise {
+  animation: rise 0.7s ease both;
+}
+
+.shot {
+  transition: transform 0.5s ease;
+}
+
+.group:hover .shot {
+  transform: scale(1.045);
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee 28s linear infinite;
+}
